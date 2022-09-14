@@ -11,3 +11,5 @@
 
 ## Close docker container
 `docker-compose down`
+
+Service will run on port `8002` locally

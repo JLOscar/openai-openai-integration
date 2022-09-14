@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  ts-node-docker:
+  openai-integration:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,9 +9,9 @@ services:
     volumes:
       - ./src:/home/node/app/src
       - ./nodemon.json:/home/node/app/nodemon.json
-    container_name: ts-node-docker
+    container_name: openai-integration
     expose:
-      - '8000'
+      - '8002'
     ports:
-      - '8000:8000'
+      - '8002:8002'
     command: npm run dev
